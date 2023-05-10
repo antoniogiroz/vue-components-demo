@@ -1,0 +1,46 @@
+body {
+  user-select: none;
+}
+
+.parent {
+  color: red;
+
+  & .child {
+    color: green;
+    font-weight: bold;
+
+    & .grandchild {
+      color: orange;
+    }
+  }
+
+  @nest .child & {
+    color: blue;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgba(0 0 0 / 24%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  color: red;
+
+  &:hover {
+    color: purple;
+  }
+}
+
+.card__body {
+  color: blue;
+}
+
+.card__footer {
+  color: green;
+}

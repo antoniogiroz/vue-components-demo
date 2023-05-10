@@ -1,0 +1,47 @@
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.75rem 1.5rem;  
+  letter-spacing: 0.4px;
+  color: white;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid grey;
+
+  &:hover {
+    background-color: darkgrey;
+  }
+}
+
+.custom-button--sm {
+  padding: 0.5rem 1rem;
+}
+
+.custom-button--lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.custom-button--primary {
+  background: blue;
+  color: white;  
+
+  &:hover {
+    background: darkblue;
+  }
+
+  &:disabled {
+    background: lightblue;
+  }
+}
+
+.custom-button--error {
+  background: red;  
+
+  &:hover {
+    background: darkred;
+  }
+}

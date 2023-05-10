@@ -1,0 +1,16 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"],
+  "compilerOptions": {
+    "isolatedModules": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "types": ["unplugin-vue-macros/macros-global"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "vueCompilerOptions": {
+    "plugins": ["@vue-macros/volar/define-model", "@vue-macros/volar/define-props", "@vue-macros/volar/define-slots"]
+  }
+}
