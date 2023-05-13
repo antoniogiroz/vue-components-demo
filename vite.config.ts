@@ -31,19 +31,15 @@ export default defineConfig({
   },
 
   plugins: [
+    vue(),
+    
     dts({
       insertTypesEntry: true,
       entryRoot: 'src',
       outputDir: 'dist/types',
       copyDtsFiles: true,
     }),
-    vueMacros({
-      plugins: {
-        vue: vue({          
-          reactivityTransform: true,
-        }),
-      },
-    }),
+
     autoImport({
       imports: ['vue', 'vue/macros', '@vueuse/core'],
       eslintrc: {
